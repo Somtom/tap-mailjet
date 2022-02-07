@@ -1,6 +1,7 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
 import datetime
+from unittest.mock import patch
 
 from singer_sdk.testing import get_standard_tap_tests
 
@@ -14,7 +15,8 @@ SAMPLE_CONFIG = {
 
 
 # Run standard built-in tap tests from the SDK:
-def test_standard_tap_tests():
+@patch('tap_mailjet.client.Client')
+def test_standard_tap_tests(mocked_mailjet_client):
     """Run standard tap tests from the SDK."""
     tests = get_standard_tap_tests(
         Tapmailjet,
