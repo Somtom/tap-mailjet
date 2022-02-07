@@ -8,8 +8,6 @@ The streams are based on the [Mailjet API definitions](https://dev.mailjet.com/e
 
 ## Installation
 
-- [ ] `Developer TODO:` Update the below as needed to correctly describe the install procedure. For instance, if you do not have a PyPi repo, or if you want users to directly install from your git repo, you can modify this step as appropriate.
-
 ```bash
 pip install git+https://github.com/Somtom/tap-mailjet.git
 ```
@@ -59,8 +57,6 @@ tap-mailjet --config CONFIG --discover > ./catalog.json
 
 ## Developer Resources
 
-- [ ] `Developer TODO:` As a first step, scan the entire project for the text "`TODO:`" and complete any recommended steps, deleting the "TODO" references once completed.
-
 ### Initialize your Development Environment
 
 ```bash
@@ -88,8 +84,7 @@ poetry run tap-mailjet --help
 _**Note:** This tap will work in any Singer environment and does not require Meltano.
 Examples here are for convenience and to streamline end-to-end orchestration scenarios._
 
-Your project comes with a custom `meltano.yml` project file already created. Open the `meltano.yml` and follow any _"TODO"_ items listed in
-the file.
+Your project comes with a custom `meltano.yml` project file already created.
 
 Next, install Meltano (if you haven't already) and any needed plugins:
 
