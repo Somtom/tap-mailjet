@@ -190,7 +190,7 @@ class ContactStream(mailjetStream):
         ),
         th.Property(
             "IsExcludedFromCampaigns",
-            th.StringType,
+            th.BooleanType,
             description="User-selected name for this contact."
         ),
         th.Property(
@@ -600,7 +600,7 @@ class TemplateStream(mailjetStream):
         ),
         th.Property(
             "Categories",
-            th.StringType,
+            th.ArrayType(th.StringType),
             description="An array containing a list of strings indicating the categories, to which the template is associated."
         ),
         th.Property(
@@ -666,7 +666,7 @@ class TemplateStream(mailjetStream):
         ),
         th.Property(
             "Purposes",
-            th.StringType,
+            th.ArrayType(th.StringType),
             description="An array indicating whether the template is a marketing, transactional or automation one. Upon POST request only the first value in the array is taken into account."
         ),
         th.Property(
@@ -676,7 +676,7 @@ class TemplateStream(mailjetStream):
         ),
         th.Property(
             "Previews",
-            th.StringType,
+            th.ArrayType(th.IntegerType),
             description="A JSON array containing Data ID's for the previews."
         ),
         th.Property(

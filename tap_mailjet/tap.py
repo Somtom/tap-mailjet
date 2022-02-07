@@ -11,16 +11,16 @@ from tap_mailjet.streams import (
     CampaignDraftStream,
 )
 STREAM_TYPES = [
-    #ContactStream,
+    ContactStream,
     MessageStream,
-    #ContactsListStream,
-    ##ContactFilterStream,
-    #CampaignDraftStream,
-    #CampaignStream,
-    #TemplateStream,
-    #BounceStatisticsStream,
-    #ClickStatisticsStream,
-    #OpenInformationStream,
+    ContactsListStream,
+    ContactFilterStream,
+    CampaignDraftStream,
+    CampaignStream,
+    TemplateStream,
+    BounceStatisticsStream,
+    ClickStatisticsStream,
+    OpenInformationStream,
 ]
 
 
