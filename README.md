@@ -16,7 +16,19 @@ pipx install tap-mailjet
 
 ### Accepted Config Options
 
-- [ ] `Developer TODO:` Provide a list of config options accepted by the tap.
+```json
+{
+  "api_key": "your api key",
+  "api_secret": "your api secret",
+  "start_date": "2022-02-07T12:00:00"
+}
+
+```
+
+- `date_start`: Starting timestamp for replications. Used in case the stream supports timestamp filtering
+- `api_key`: Your Mailjet API key - can be found in [your account settings](https://app.mailjet.com/account/api_keys)
+- `api_secret`: Your Mailjet API secret - can be found in [your account settings](https://app.mailjet.com/account/api_keys)
+
 
 A full list of supported settings and capabilities for this
 tap is available by running:
@@ -27,7 +39,9 @@ tap-mailjet --about
 
 ### Source Authentication and Authorization
 
-- [ ] `Developer TODO:` If your tap requires special access on the source system, or any special authentication requirements, provide those here.
+The authentication and authorization works by using your Mailjet API keys.
+The `api_key` and `api_secret` can be found in [your account settings](https://app.mailjet.com/account/api_keys)
+and need to be entered in your `config.json` (see section above)
 
 ## Usage
 

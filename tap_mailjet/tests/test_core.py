@@ -7,8 +7,9 @@ from singer_sdk.testing import get_standard_tap_tests
 from tap_mailjet.tap import Tapmailjet
 
 SAMPLE_CONFIG = {
-    "start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
-    # TODO: Initialize minimal tap config
+    "start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+    "api_key": "test_key",
+    "api_secret": "test_secret"
 }
 
 
