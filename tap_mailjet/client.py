@@ -16,6 +16,8 @@ class mailjetStream(Stream):
     limit = 1000
     # Request parameter used for filtering the replication state
     replication_request_param = None
+    # Additional request params to be sent with the request
+    request_params = None
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -39,6 +41,8 @@ class mailjetStream(Stream):
         }
         if self.replication_key and self.replication_request_param:
             filters[self.replication_request_param] = self.get_starting_replication_key_value(context)
+        if self.request_params:
+            filters.update(self.request_params)
 
         self.logger.info(filters)
         self.logger.info(self.get_starting_replication_key_value(context))

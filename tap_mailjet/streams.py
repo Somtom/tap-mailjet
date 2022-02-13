@@ -13,6 +13,9 @@ class MessageStream(mailjetStream):
     name = "message"
     replication_key = "ArrivedAt"
     replication_request_param = "FromTS"
+    request_params = {
+        'ShowSubject': True
+    }
     schema = th.PropertiesList(
         th.Property(
             "ID",
