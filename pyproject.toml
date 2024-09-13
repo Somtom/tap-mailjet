@@ -7,7 +7,7 @@ keywords = [
     "ELT",
     "mailjet",
 ]
-license = "Apache 2.0"
+license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "<3.11,>=3.6.2"
@@ -31,11 +31,7 @@ multi_line_output = 3 # Vertical Hanging Indent
 src_paths = "tap_mailjet"
 
 [build-system]
-# Uncomment the pinned version in favor of the git URL once
-# https://github.com/python-poetry/poetry-core/pull/257 is merged
-# and a new poetry-core 1.0.x is released
-# requires = ["poetry-core>=1.0.0"]
-requires = ["poetry-core @ git+https://github.com/python-poetry/poetry-core.git@master"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
